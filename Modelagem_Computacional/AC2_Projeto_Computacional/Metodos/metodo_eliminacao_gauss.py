@@ -12,8 +12,12 @@ def eliminacao_gauss(matriz, igualdade):
                 matriz[i][j] = matriz[i][j] + m*matriz[k][j]
     return matriz, igualdade
 
-matriz = [[4, 2, -4], [2, 10, 4],[-4, 4, 9]]
-b = [0, 6, 5]
+matriz = [
+        [2 , 1, -1], 
+        [1, -3, 2],
+        [3, 2, -1]
+    ]
+b =     [ 1, 4, 2]
 
 matriz_resposta = eliminacao_gauss(matriz, b)
 print(f" {matriz_resposta[0][0]} \n {matriz_resposta[0][1]} \n {matriz_resposta[0][2]} ")

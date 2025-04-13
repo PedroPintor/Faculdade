@@ -1,15 +1,6 @@
+# Metodos/
 
-
-# Variaveis
-max_iter = 100
-erro = 0.00000001
-
-def funcao(x):
-    return x**2 + 3*x + 2
-def derivada_funcao(x):
-    return 2*x + 3
-
-def metodo_newton(valor_inicial):
+def metodo_newton(valor_inicial, funcao, derivada_funcao, erro=0.001, max_iter=100):
     valor = valor_inicial
     iterador = 0 
     while iterador < max_iter:
@@ -23,14 +14,10 @@ def metodo_newton(valor_inicial):
         temp = valor - ( f_valor / derf_valor)
         valor = temp
         if abs(funcao(valor)) < erro:
+            print ( f" valor da raiz: {valor} \n numero de iteracoes: {iterador}")
             return valor, iterador
         iterador += 1
     print (" nao convergiu")
     return None
     
 
-valor_inicial = 510
-resultado = metodo_newton(valor_inicial)
-if resultado is not None:
-    print ( f" valor da raiz: {resultado[0]} \n numero de iteracoes: {resultado[1]}")
-    print(f" teste da raiz :{funcao(resultado[0]):.8f}")
