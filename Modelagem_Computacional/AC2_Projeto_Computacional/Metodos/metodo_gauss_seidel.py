@@ -33,16 +33,19 @@ def erro_normal_infinita(A,B):
     
 
 def metodo_gauss_seidel(matriz_A, matriz_x, matriz_b, erro_max=0.001, iter_max=100):
-    X = np.array(matriz_x)
-    B = np.array(matriz_b)
+    X = np.array(matriz_x).reshape(-1,1)
+    B = np.array(matriz_b).reshape(-1,1)
     L,D,R = matriz_to_ldr(matriz_A)
     
-    inversa_LD = inversa_matriz((L+D))
+    soma = L + D
+    inversa_LD = inversa_matriz(soma)
     if inversa_LD is None:
         return None
 
     for i in range(0, iter_max):
-        temp_x = -inversa_LD @ (R @ X) + (inversa_LD @ B)
+        # mult_invB = mult_matriz(inversa_LD,R)
+        # mult_x = mult_matriz(-mult_invB,X)
+        temp_x = inversa_LD @ (B - R @ X)
         # verificar erro
         if erro_normal_infinita(temp_x,X) < erro_max:
             return temp_x,i
