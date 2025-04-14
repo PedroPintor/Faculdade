@@ -50,6 +50,22 @@ def dist_temperatura_matplot(matriz):
     plt.title('Distribuição de Temperatura')
     plt.show()
 
+def montar_matriz_b(tamanho):
+    b = []
+    valores_inicio_fim = [60,40,40,40,40,40,40,60]
+    valores_meio = [20,0,0,0,0,0,0,20]
+    # primeiros numeros
+    for i in valores_inicio_fim:
+        b.append(i)
+    # meio
+    for j in range(0,tamanho - 2):
+        for valor in valores_meio:
+            b.append(valor)
+    # final
+    for z in valores_inicio_fim:
+        b.append(z)
+    return b
+
 def main():
     # Matriz A
     A = gerar_matriz_padrao(16,16)
@@ -59,5 +75,15 @@ def main():
     reshape_resultado = resultado.reshape(4,4)
     dist_temperatura_matplot(reshape_resultado)
     dist_temperatura_seaboarn(reshape_resultado)
+
+    # Matriz B
+    B = gerar_matriz_padrao(64,64)
+    y = np.zeros(64)
+    d = montar_matriz_b(8)
+    result, j = mdgs.metodo_gauss_seidel(B,y,d)
+    reshape_result = result.reshape(8,8)
+    dist_temperatura_matplot(reshape_result)
+    dist_temperatura_seaboarn(reshape_result)
+    
 
 main()
