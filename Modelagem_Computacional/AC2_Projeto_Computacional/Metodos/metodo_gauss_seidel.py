@@ -26,9 +26,9 @@ def inversa_matriz(A):
 
 def erro_normal_infinita(A,B):
     # ( ||A-B|| / ||A||)
-    max_a = np.max(A)
+    max_a = np.max(np.abs(A))
     delta = A - B
-    max_delta = np.max(delta)
+    max_delta = np.max(np.abs(delta))
     return max_delta / max_a
     
 
@@ -43,12 +43,10 @@ def metodo_gauss_seidel(matriz_A, matriz_x, matriz_b, erro_max=0.001, iter_max=1
         return None
 
     for i in range(0, iter_max):
-        # mult_invB = mult_matriz(inversa_LD,R)
-        # mult_x = mult_matriz(-mult_invB,X)
         temp_x = inversa_LD @ (B - R @ X)
         # verificar erro
         if erro_normal_infinita(temp_x,X) < erro_max:
             return temp_x,i
-        matriz_x = temp_x 
-    return matriz_x,i
+        X = temp_x 
+    return X,i
 
