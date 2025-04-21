@@ -48,8 +48,8 @@ def encontrar_intervalo(funcao):
 def pegar_numero(mensagem = 'digite um numero: '):
     while True:
         try:
-            numero = float(input(mensagem));
-            break;
+            numero = float(input(mensagem))
+            break
         except ValueError as e:
             print(' numero invalido ')
             print(f'erro: {e}')

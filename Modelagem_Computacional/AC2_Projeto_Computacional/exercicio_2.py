@@ -91,5 +91,4 @@ def main():
     dist_temperatura_seaboarn(reshape_result)
 
 
-
 main()
