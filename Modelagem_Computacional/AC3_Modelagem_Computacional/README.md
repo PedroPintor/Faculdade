@@ -49,33 +49,33 @@ Modelar a propagação de uma epidemia fictícia utilizando o modelo SIR (Suscet
 
 ### 📊 Dados Sem Medidas Preventivas
 
-* ⏱️ Dia de pico de infectados: 42  
-* 📈 Número máximo de infectados: 4782  
-* 📡 Taxa de infecção: 0.25  
-* 💊 Taxa de recuperação: 0.05  
-* 🧮 Número de reprodução básico (R0): 5.00  
-* 🕐 Período infeccioso médio: 20 dias
+* Dia de pico de infectados: 42  
+* Número máximo de infectados: 4782  
+* Taxa de infecção: 0.25  
+* Taxa de recuperação: 0.05  
+* Número de reprodução básico (R0): 5.00  
+* Período infeccioso médio: 20 dias
 
 ---
 
 ### 📉 Dados Com Medidas Preventivas
 
-* ⏱️ Dia de pico de infectados: 44  
-* 📈 Número máximo de infectados: 2522  
-* 📡 Taxa de infecção inicial: 0.25  
-* 📉 Taxa de infecção final: 0.10  
-* 💊 Taxa de recuperação: 0.05  
-* 🧮 R0 inicial: 5.00  
-* 🧮 R0 final: 2.00  
-* 🕐 Período infeccioso médio: 20 dias
+* ⏱Dia de pico de infectados: 44  
+* Número máximo de infectados: 2522  
+* Taxa de infecção sem medidas: 0.25  
+* Taxa de infecção com medidas: 0.10  
+* Taxa de recuperação: 0.05  
+* R0 sem medidas: 5.00  
+* R0 com medidas: 2.00  
+* Período infeccioso médio sem medidas: 20 dias
 
 ---
 
 ## 📊 Análises Comparativas
 
-* 🔻 Redução absoluta do pico de infectados: 2259.75 pessoas  
-* 📉 Redução relativa do pico de infectados: 53%  
-* ⌛ Atraso no pico de infecção: 2 dias (de 42 para 44 dias)
+* Redução do pico de infectados: 2259 pessoas  
+* Redução relativa do pico de infectados: 53%  
+* Atraso no pico de infecção: 2 dias (de 42 para 44 dias)
 
 ---
 
