@@ -1,0 +1,18 @@
+<alunos>
+  <aluno>
+    <nome>Antonio</nome>
+    <idade>15</idade>
+  </aluno>
+  <aluno>
+    <nome>Bernardo</nome>
+    <idade>25</idade>
+  </aluno>
+  <aluno>
+    <nome>Caio</nome>
+    <idade>34</idade>
+  </aluno>
+  <aluno>
+    <nome>Carlos</nome>
+    <idade>17</idade>
+  </aluno>
+</alunos>
