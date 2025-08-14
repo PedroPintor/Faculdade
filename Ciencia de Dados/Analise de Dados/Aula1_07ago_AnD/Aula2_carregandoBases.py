@@ -2,7 +2,7 @@
 """
 
 programação para analise de dados
-Aula 1 - carregando bases de dados de vários tipos
+Aula 2 - carregando bases de dados de vários tipos
 12 ago 25
 
 """
